@@ -4,8 +4,20 @@
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include "WThermostat.h"
-#include "WThermostat_BAC_002_ALW.h"
-#include "WThermostat_ME102H.h"
+//#include "WThermostat_BAC_002_ALW.h"
+//#include "WThermostat_ME102H.h"
+
+const char* SENSOR_SELECTION_INTERNAL = "internal";
+const char* SENSOR_SELECTION_FLOOR = "floor";
+const char* SENSOR_SELECTION_BOTH = "both";
+
+const char* SYSTEM_MODE_COOL = "cool";
+const char* SYSTEM_MODE_HEAT = "heat";
+const char* SYSTEM_MODE_FAN = "fan_only";
+const char* FAN_MODE_AUTO = SCHEDULES_MODE_AUTO;
+const char* FAN_MODE_LOW  = "low";
+const char* FAN_MODE_MEDIUM  = "medium";
+const char* FAN_MODE_HIGH = "high";
 
 class WThermostat_ME81H : public WThermostat {
 public :
